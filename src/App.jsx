@@ -8,6 +8,7 @@ import FootCard from './components/FootCard'
 function App() {
   const randomIndex = Math.floor(Math.random()* quote.length)
   const [index, setIndex] = useState(randomIndex)
+  
   const changeQuote = () => {
     setIndex(randomIndex)
   }  

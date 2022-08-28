@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 const QuoteBox  = ({index,color}) => {
     return (
         <div>
