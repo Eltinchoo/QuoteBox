@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import quote from './components/quote.json'
+import quotes from './components/quotes.json'
 import QuoteBox from './components/QuoteBox '
 import FootCard from './components/FootCard'
 
 function App() {
-  const randomIndex = Math.floor(Math.random()* quote.length)
+  const randomIndex = Math.floor(Math.random()* quotes.length)
   const [index, setIndex] = useState(randomIndex)
   
   const changeQuote = () => {
-    setIndex(randomIndex)
+    setIndex(randomIndex+1)
   }  
 
   const colors = [
@@ -28,12 +28,12 @@ function App() {
     <div className="App">
       <div className='quote-box'>
       <QuoteBox 
-        index={quote[randomIndex].quote}
+        index={quotes[randomIndex].quote}
         color={colors[randomColors]}
         />
       <FootCard
        change={changeQuote}
-       author={quote[randomIndex].author}
+       author={quotes[randomIndex].author}
        color={colors[randomColors]}
        />
       </div>
